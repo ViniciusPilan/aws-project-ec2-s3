@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <style>
+
+    html {font-family: "Source Sans Pro", sans-serif;}
+
+    .login-container {
+      width: 400px;
+      margin: 100px auto;
+      text-align: center;
+    }
+    
+    h2 {
+      margin-bottom: 5px;
+      font-size: 24px;
+      font-weight: bold;
+    }
+    
+    input[type="text"], input[type="password"] {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 20px;
+      font-size: 18px;
+      border: 1px solid gray;
+      border-radius: 25px;
+    }
+    
+    button {
+      padding: 10px 20px;
+      background-color: lightgray;
+      border: none;
+      border-radius: 25px;
+      font-size: 18px;
+      cursor: pointer;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      transition: all 0.3s ease;
+    }
+    
+    button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 8px rgba(0,0,0,0.3);
+    }
+  </style>
+</head>
+<body>
+  <div class="login-container">
+    <h2>Sign in to see your photos!</h2>
+    <p style="margin-bottom: 10%;">If you don't have yeat an account, sign up for free!</p>
+    <form action="../Scripts/register.php" method="post">
+      <input type="text" placeholder="Username" name="username">
+      <input type="password" placeholder="Password" name="password">
+      <button type="submit">Register</button>
+    </form>
+  </div>
+</body>
+</html>

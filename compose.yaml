@@ -1,0 +1,51 @@
+version: "3.9"
+
+services:
+  index_server:
+    container_name: index_server
+    image: index_server:1.0
+    build: ./index_server/
+    restart: always
+    networks:
+      - servers
+    ports:
+      - 80:80
+
+  user_server:
+    container_name: user_server
+    image: user_server:1.0
+    build: ./user_server/
+    restart: always
+    networks:
+      - servers
+
+  users_db:
+    container_name: users_db
+    image: mysql:8.0.32
+    restart: always
+    networks:
+      - servers
+    environment:
+      MYSQL_ROOT_PASSWORD: 2612
+      MYSQL_DATABASE: db
+    volumes:
+      - db-content:/var/lib/mysql
+  
+  adm_db:
+    container_name: adm_db
+    image: adminer:4.8.1
+    restart: always
+    depends_on:
+      - users_db
+    ports:
+      - 8080:8080
+    networks:
+      - servers
+    environment:
+      ADMINER_DEFAULT_SERVER: users_db
+    
+volumes:
+  db-content:
+
+networks:
+  servers:
