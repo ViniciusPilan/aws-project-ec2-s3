@@ -4,13 +4,12 @@
   <style>
 
     html {font-family: "Source Sans Pro", sans-serif;}
-
     .menu {
       display: flex;
       justify-content: center;
       align-items: center;
       height: 80px;
-      background-color: lightgray;
+      background-color: lightslategray;
     }
     
     .menu button {
@@ -60,27 +59,23 @@
 </head>
 <body>
   <div class="menu">
-    <button onclick="window.location.href='http://localhost/'">Logout</button>
+    <button onclick="window.location.href='http://localhost/signin'">Sign In</button>
+    <button onclick="window.location.href='http://localhost/signup'">Sign Up</button>
   </div>
-  <h1>Your Amazing Image Catalog</h1>
+  <h1>Our Amazing Image Catalog</h1>
   <div class="image-container">
     <div class="image">
       <img src="../Images/image1.jpg" alt="Image 1">
     </div>
     <div class="image">
-      <img src="image2.jpg" alt="Image 2">
+      <img src="../Images/image2.jpg" alt="Image 2">
     </div>
     <div class="image">
-      <img src="image3.jpg" alt="Image 3">
+      <img src="../Images/image3.jpg" alt="Image 3">
     </div>
     <div class="image">
-        <img src="image4.jpg" alt="Image 4">
+      <img src="../Images/image4.jpg" alt="Image 4">
       </div>
-  </div>
-
-  <div class="menu" style="background-color: white;">
-    <button style="background-color: lightgray;">Add</button>
-    <button style="background-color: lightgray;">Remove</button>
   </div>
 </body>
 </html>
