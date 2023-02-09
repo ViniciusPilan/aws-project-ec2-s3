@@ -1,6 +1,7 @@
 # Projeto AWS
-Integração dos serviços EC2 e S3 da plataforma Amazon Web Services
+Integração dos serviços EC2 e S3 da plataforma **Amazon Web Services (AWS)**
 
+![home_image](images/home-image.jpg)
 
 ## O que foi feito
 
@@ -14,7 +15,7 @@ Foram instanciadas ao todo três máquinas virtuais (sistema operacional Ubuntu)
 ![image1](images/ec2-instances-list.jpg)
 
 ### IPs Elásticos
-Para cada uma das máquinas instânciadas foi atribuído um IP Elástico, para que assim, elas possam ter **IP e DNS fixos** para consolidar as comunicações e não gerar problemas caso uma das máquinas seja re-instanciada. 
+Para cada uma das máquinas instânciadas foi atribuído um IP Elástico, para que assim, elas possam ter **IP e DNS fixos** para consolidar as comunicações e não gerar problemas caso uma das máquinas seja reinstanciada. 
 
 ![image2](images/elastic-ip-list.jpg)
 
@@ -44,4 +45,6 @@ Ao recarregar novamente, a requisição é enviada à máquina 01 e por ai em di
 
 *Como em situações práticas a ideia é ter o mesmo conteúdo em cada máquina, aqui foi feito desse jeito apenas para exemplificação do funcionamento do projeto.*
 
-*Os html gerados foram com o auxílio do ChatGPT e as imagens provenientes do Google.*
+*Os html utilizdos foram desenvolvidos com o auxílio do ChatGPT e as imagens foram provenientes do Google.*
+
+*Como o projeto é de fins educaionais, as imagens e as instâncias foram removidas da AWS para não gerarem custos (os recursos utilizados foram do aws free tier).*
