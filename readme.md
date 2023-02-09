@@ -3,9 +3,9 @@ Integração dos serviços EC2 e S3 da plataforma **Amazon Web Services (AWS)**
 
 ![home_image](images/home-image-ec2-s3.jpg)
 
-## O que foi feito
+## EC2 - O que foi feito
 
-### Visão geral das EC2 criadas
+### Visão geral das instâncias criadas
 Foram instanciadas ao todo três máquinas virtuais (sistema operacional Ubuntu) no AWS EC2, sendo elas:
 1. **Duas máquinas idênticas funcionando como réplicas**, com NGINX instalado para execução de um servidor web simples que carrega algumas imagens armazenadas como objetos dentro de um bucket do AWS S3. 
 2. **Uma terceira instância criada também com NGINX porém para balanceamento de carga**, distribuindo as requisições recebidas para essas duas máquinas réplicas. 
@@ -29,8 +29,17 @@ Já o **security group do Load Balancer** aceita requisições HTTP na porta 80 
 ### Configuração da aplicação executada em cada instância
 Para configuração das máquinas, ou seja, instalação e configuração do NGINX para rodar conforme o desejado, foi clonado este repositório em cada uma delas e, de acordo com a finalidade da máquina (web-server ou load-balancer), foi executado via bash o respectivo arquivo *init.sh*.
 
+## S3 - O que foi feito
+Foi criado um bucket público para armazenamento das imagens para serem acessadas pelas instâncias do EC2. 
 
-## Resultados
+
+![image3](images/images-in-the-bucket.jpg)
+
+A *bucket policy* definida foi para acesso público (para qualquer IP) a todos os objetos da pasta images. Dessa forma, ficou possível realizar o acesso as imagens a partir de sua URL dentro do bucket, conforme exemplificado abaixo:
+
+![image4](images/example-link-image-in-s3-bucket.png)
+
+## Resultados obtidos 
 Ao acessar o DNS público do IP Élástico da **instância balanceadora de carga**, o conteúdo **index do servidor web** hospedado na máquina **réplica 01** é apresentado, carregando objetos (as imagens) armazenadas no Bucket S3:
 
 ![image3](images/print-page-ec2-instance-01.jpg)
