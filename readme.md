@@ -1,7 +1,7 @@
 # Projeto AWS
 Integração dos serviços EC2 e S3 da plataforma **Amazon Web Services (AWS)**
 
-![home_image](images/home-image.jpg)
+![home_image](images/home-image-ec2-s3.jpg)
 
 ## O que foi feito
 
