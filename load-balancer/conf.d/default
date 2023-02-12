@@ -1,7 +1,7 @@
-#upstream web-server {
-#    server IP1;
-#    server IP2;
-#}
+upstream web-server {
+    server localhost; #Ip machine one
+    server localhost; #Ip machine two
+}
 
 server {
     listen       80;
@@ -9,7 +9,6 @@ server {
     root /var/www/html;
 
     location ^~ / {
-    	index index.html;
-    #    proxy_pass http://web-server/;
+        proxy_pass http://web-server/;
     }
 }
