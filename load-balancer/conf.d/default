@@ -1,0 +1,15 @@
+#upstream web-server {
+#    server IP1;
+#    server IP2;
+#}
+
+server {
+    listen       80;
+    server_name  localhost;
+    root /var/www/html;
+
+    location ^~ / {
+    	index index.html;
+    #    proxy_pass http://web-server/;
+    }
+}
