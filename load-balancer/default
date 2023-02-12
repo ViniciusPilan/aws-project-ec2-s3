@@ -1,7 +1,7 @@
-upstream web-server {
-    server $IP_ONE:80;
-    server $IP_TWO:80;
-}
+#upstream web-server {
+#    server $IP_ONE:80;
+#    server $IP_TWO:80;
+#}
 
 server {
     listen       80;
