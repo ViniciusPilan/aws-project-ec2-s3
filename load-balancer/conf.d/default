@@ -1,6 +1,6 @@
 upstream web-server {
-    server localhost; #Ip machine one
-    server localhost; #Ip machine two
+    server ${IP_ONE}; #Ip machine one
+    server ${IP_TWO}; #Ip machine two
 }
 
 server {
