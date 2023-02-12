@@ -1,6 +1,5 @@
 upstream web-server {
-    server ${IP_ONE}; #Ip machine one
-    server ${IP_TWO}; #Ip machine two
+
 }
 
 server {
