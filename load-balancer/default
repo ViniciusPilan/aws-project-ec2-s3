@@ -1,6 +1,6 @@
 upstream web-server {
-    server $IP_ONE;
-    server $IP_TWO;
+    server $IP_ONE:80;
+    server $IP_TWO:80;
 }
 
 server {
