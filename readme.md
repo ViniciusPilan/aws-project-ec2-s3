@@ -10,7 +10,9 @@ Foram instanciadas ao todo três máquinas virtuais (sistema operacional Ubuntu)
 1. **Duas máquinas idênticas funcionando como réplicas**, com NGINX instalado para execução de um servidor web simples que carrega algumas imagens armazenadas como objetos dentro de um bucket do AWS S3. 
 2. **Uma terceira instância criada também com NGINX porém para balanceamento de carga**, distribuindo as requisições recebidas para essas duas máquinas réplicas. 
 
-*O NGINX em ambas as máquinas é executado na porta 80 e apenas a máquina balanceadora de carga está autorizada a receber requisições http de qualquer IP.*
+*O NGINX em ambas as máquinas é executado na porta 80 e apenas a máquina balanceadora de carga está autorizada a receber requisições http de qualquer IP. As instâncias que executam o servidor web só atendem requisições na 80 vindas do Load Balancer.*
+
+*Não foram utilizados os recursos Load Balancer e Auto Grupo Scaling pois são recursos não inclusos no free tier da AWS, porém, em sistemas de alta disponibilidade, tais recursos são essenciais.*
 
 ![image1](images/ec2-instances-list.jpg)
 
